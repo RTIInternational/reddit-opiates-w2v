@@ -2,10 +2,11 @@ import streamlit as st
 import gensim
 from pathlib import Path
 
+
 models = {
-    "3.8": "m.w2v",
-    "3.7": "m-3.7.w2v",
     "Lowercase Unigram": "models/lowercase-sg.w2v.kv",
+    "Lowercase scispaCy Unigram": "models/lowercase-sci-sg.w2v.kv",
+    "Lowercase scispaCy Bigrams": "models/lowercase-sci-bigrams-sg.w2v.kv",
 }
 
 assert all((Path(p).exists() for p in models.values())), "Model Files Missing"
@@ -16,7 +17,7 @@ def load_model(name):
     path = models[name]
     model = gensim.models.KeyedVectors.load(path, mmap="r")
     model.vectors_norm = model.vectors  # prevent recalc of normed vectors
-    model.most_similar("opiates")  # any word will do: just to page all in
+    model.most_similar("opioid")  # any word will do: just to page all in
     return model
 
 
