@@ -13,6 +13,9 @@ models = {
 assert all((Path(p).exists() for p in models.values())), "Model Files Missing"
 
 readme = Path("readme.md").read_text()
+sl_app_text_start = readme.find("### Streamlit App")
+sl_app_text_finish = readme.find("### Data")
+readme = readme[:sl_app_text_start] + readme[sl_app_text_finish:]
 
 
 @st.cache(hash_funcs={gensim.models.keyedvectors.Word2VecKeyedVectors: lambda _: None})

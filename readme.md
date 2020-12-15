@@ -4,6 +4,12 @@
 
 This repository contains 3 word2vec word embedding models that were used to better understand vocabulary around opioid use. 
 
+### Streamlit App
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/rtiinternational/reddit-opiates-w2v/main/app.py)
+
+You can interact with these models search terminology via a streamlit app linked above.
+
 ### Data
 
 Data was collected from two subreddits: `r/opiates` and `r/opiatesrecovery`. The model was trained using three types of content from the two subreddits: post titles, post selftexts, and all comments. The table below describes the number of documents per source.
