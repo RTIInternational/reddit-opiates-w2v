@@ -25,7 +25,10 @@ def load_model(name):
 
 st.markdown("# Reddit Opioid Terminology - Word Embedding Explorer")
 st.markdown(
-    "To use, select a model, type in a set of terms (optionally separated by commas), and select the top n number of items to return. For details on model specifics, expand the details below"
+    "To use, select a model, type in a set of terms "
+    "(optionally separated by commas), and select the"
+    " top n number of items to return. For details on"
+    " model specifics, expand the accordion below."
 )
 
 with st.beta_expander("Expand for Model Details"):
