@@ -1,5 +1,7 @@
 ## Reddit Opioid-Related word2vec Word Embedding Models
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4323343.svg)](https://doi.org/10.5281/zenodo.4323343)
+
 This repository contains 3 word2vec word embedding models that were used to better understand vocabulary around opioid use. 
 
 ### Data
